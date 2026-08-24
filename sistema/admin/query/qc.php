@@ -9,7 +9,7 @@
 //     $conn->set_charset("utf8");
 
 $servername="localhost";
-    $database="p25_2"; //solo se quitó para conexión remota
+    $database="rescate_espacios_dashboard"; //solo se quitó para conexión remota
     $username="root";
     $password="";
 
