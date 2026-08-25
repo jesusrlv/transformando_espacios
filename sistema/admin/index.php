@@ -35,7 +35,7 @@ $categoria = $_SESSION['categoria'];
     <meta name="INJUVENTUD" content="Consejo Juvenil">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Admin | PEJ2026</title>
+    <title>Perfil Admin | TRANSFORMANDO ESPACIOS</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 

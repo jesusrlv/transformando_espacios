@@ -20,20 +20,15 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
     ';
         if($no_resultados == 0 || empty($no_resultados)){
             echo '
-        <div class="card border-danger text-light" style="height:300px; background-color: rgba(238, 73, 109, 0.9);" id="botonesFiles">
+        <div class="card border-danger text-light" style="height:300px; background-color: #343a40;" id="botonesFiles">
         ';
         }
-        // else if($no_resultados > 0 && $no_resultados <= $no_resultados_warning){
-        //     echo '
-        // <div class="card border-warning" style="height:300px">
-        //     ';
-        // }
+        
         else if($no_resultados > 0){
             echo '
         <div class="card border-success  text-light" style="height:300px; background-color: #0056d1;">
             ';
         }
-
 
           echo'
             

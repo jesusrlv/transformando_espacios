@@ -26,7 +26,7 @@ else{
     <meta name="INJUVENTUD" content="Consejo Juvenil">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Usuario | PEJ2026</title>
+    <title>Perfil Usuario | TRANSFORMANDO ESPACIOS</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -53,18 +53,27 @@ else{
         font-family: 'Montserrat', sans-serif;
       }
       #colorRounded{
-        background-color: rgba(122, 205, 228, 0.929);
+        background-color: rgba(122, 205, 228, 0.7);
       }
       #imgPortrait{
-        background-image: url('../../img/fondo_pej2026.jpg');
-
-        object-fit: cover;
-        background-position: 80% 100%; /* Center the image */
-        background-repeat: repeat;
-        background-size: 100% auto; /* Resize the background image to cover the entire container */
-        background-position: center;
         width:100%; 
-        height:100%;
+      }
+      #portada{
+        position: relative;
+        min-height: calc(100vh - 56px);
+        overflow: hidden;
+      }
+      #portada > img{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+      #portada > section{
+        position: relative;
+        z-index: 1;
       }
 
       .bd-placeholder-img {
@@ -142,16 +151,13 @@ else{
           transition: width 0.3s, height 0.3s, transform 0.3s;
         }
         #imgPortrait{
-
-        object-fit: cover;
-        background-repeat: no-repeat;
-        background-size: 350% 18%; /* Resize the background image to cover the entire container */
-        background-position: 0 0;
-        
-       
+          width: 100%;
+        }
+        #portada{
+          min-height: calc(100vh - 56px);
         }
         #colorRounded{
-          background-color: rgba(61, 42, 93, 0.9);
+          background-color: rgba(61, 42, 93, 0.4);
           border-radius:0px;
         }
         #textPortada{
@@ -166,33 +172,32 @@ else{
     
 <header>
 <span id="inicio"></span>
-  <div class="navbar navbar-dark shadow-sm" style="background:rgb(61, 42, 93);">
+  <div class="navbar navbar-dark shadow-sm" style="background: rgb(20, 37, 63);">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img src="../../img/logo_injuventud_0.png" width="20" alt="" class="me-1">
-        <strong id="textPortada">POSTULANTE | PREMIO ESTATAL DE LA JUVENTUD 2026</strong>
+        <strong id="textPortada">POSTULANTE | TRANSFORMANDO ESPACIOS</strong>
       </a>
       <a href="prcd/sort.php" type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-door-open"></i> Salir</a>
     </div>
   </div>
 </header>
 
-<!-- <main style="background-image: url('../../img/fondo_prueba.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; width:100%; height:100%;" id="imgPortrait"> -->
 <main id="imgPortrait">
 
-  <!-- <section class="py-5 text-center container"> -->
-  <section class="text-center container">
-    <!-- <div class="row py-lg-5"  style="background-image: url('../../img/logo_consejo_05.png')"> -->
+  <div id="portada">
+    <img src="../../img/fondo_transformando_espacios_2.jpg" alt="">
+    <section class="text-center container">
     <div class="row py-lg-5"  >
       <div class="col-lg-6 col-md-8 mx-auto rounded p-2" id="colorRounded">
-        <h1 class="fw-light"><img src="../../img/logo_pej2025_01.png" alt="" width="100%" style="padding:10px; border-radius: 15px;"></h1>
+        <h1 class="fw-light"><img src="../../img/logo_transformando.png" alt="" width="100%" style="padding:10px; border-radius: 15px;"></h1>
         <h2 class="fw-bold" style="color:white">Bienvenid@</h2>
         <h2 class="fw-bold" style="color:white"><i class="bi bi-person-circle"></i></h2>
         <h2 class="fw-bold" style="color:white"><?php echo $nombre ?></h2>
         <?php echo '<input type="text" value="'.$categoria.'" id="catCompleto" hidden>' ?>
-        <h5 class="fw-bold" style="color:white">Categoría: <output id="categoriaOut"></h5>
+        <h5 class="fw-bold" style="color:white">Categoría: <label id="categoriaOut"></label></h5>
         <p id="resultSpan"></p>
-        <p class="lead text-light mt-2">Sistema de postulación del INJUVENTUD para del Premio Estatal de la Juventud del Zacatecas en su edición 2026.</p>
+        <p class="lead text-light mt-2">Sistema de postulación del INJUVENTUD | TRANSFORMANDO ESPACIOS.</p>
         <p>
           <hr class="text-secondary">
           <a href="#seccion_documentos" class="btn btn-primary my-2"><i class="bi bi-filetype-pdf"></i> Sección de documentos</a>
@@ -200,7 +205,8 @@ else{
         </p>
       </div>
     </div>
-  </section>
+    </section>
+  </div>
 
   <div class="album py-5 bg-light">
     <div class="container">
@@ -237,12 +243,12 @@ else{
             <div class="card-body">
               <h5 class="card-title">Convocatoria</h5>
               <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-exclamation-triangle-fill text-warning"></i> Convocatoria vigente</h6>
-              <p class="card-text">Convocatoria vigente acerca de la postulación al Premio Estatal de la Juventud 2026.</p>
-              <p><a href="generador_constancia.php" target="_blank" style="text-decoration:none" class="btn btn-primary" id="constanciaP" hidden> <i class="bi bi-file-earmark-richtext"></i> Constancia de participación al PEJ2026</a></p>
+              <p class="card-text">Convocatoria vigente acerca de la postulación de Transformando Espacios.</p>
+              <p><a href="generador_constancia.php" target="_blank" style="text-decoration:none" class="btn btn-primary" id="constanciaP" hidden> <i class="bi bi-file-earmark-richtext"></i> Constancia de participación de Transformando Espacios</a></p>
               
             </div>
             <div class="card-footer">
-              <a href="https://juventud.zacatecas.gob.mx/docs/convocatoria_pej2025.pdf" target="_blank" class="card-link" style="text-decoration: none"><i class="bi bi-eye"></i> Revisar</a>
+              <a href="https://juventud.zacatecas.gob.mx/docs/convocatoria_transformando_espacios_2026.pdf" target="_blank" class="card-link" style="text-decoration: none"><i class="bi bi-eye"></i> Revisar</a>
             </div>
           </div>
         </div>
@@ -280,7 +286,7 @@ else{
           <!-- <p class="mb-0 text-center"><small><a href="/" style="text-decoration: none;" class="text-light">Gobierno del estado de Zacatecas</a>.</small></p> -->
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2 text-center">
-          <img src="../../img/logo_pej2025_01.png" width="180" alt="">
+          <img src="../../img/logo_transformando.png" width="180" alt="">
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
           <p class="float-end mb-1 text-center">

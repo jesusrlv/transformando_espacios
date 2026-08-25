@@ -133,7 +133,7 @@ function uploadVideo(idDoc,idUsr){
 
           Swal.fire({
             icon: 'success',
-            imageUrl: '../../img/logo_pej2025_01.png',
+            imageUrl: '../../img/logo_transformando.png',
             imageHeight: 200,
             title: 'Video cargado',
             text: 'Proceso correcto',
@@ -176,7 +176,7 @@ function editVideo(idDoc,idUsr){
   
             Swal.fire({
               icon: 'success',
-              imageUrl: '../../img/logo_pej2025_01.png',
+              imageUrl: '../../img/logo_transformando.png',
               imageHeight: 200,
               title: 'Video actualizado',
               text: 'Proceso correcto',
@@ -188,7 +188,7 @@ function editVideo(idDoc,idUsr){
         else{
             Swal.fire({
               icon: 'error',
-              imageUrl: '../../img/logo_pej2025_01.png',
+              imageUrl: '../../img/logo_transformando.png',
               imageHeight: 200,
               title: 'Video no actualizado',
               text: 'Proceso incorrecto',
@@ -209,10 +209,10 @@ function contador(){
   if(cont == 0){
     Swal.fire({
       icon: 'info',
-      imageUrl: '../../img/logo_pej2025_01.png',
+      imageUrl: '../../img/logo_transformando.png',
       imageHeight: 200,
-      title: 'Bienvenido al sistema de postulación al PEJ2026',
-      text: 'No has cargado documentos para postularte al PEJ2026, comienza a subir tus documentos.',
+      title: 'Bienvenido al sistema de postulación Transformando Espacios',
+      text: 'No has cargado documentos para postularte de Transformando Espacios, comienza a subir tus documentos.',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
@@ -221,10 +221,10 @@ function contador(){
   else if(cont >= 0 & cont < 11){
     Swal.fire({
       icon: 'warning',
-      imageUrl: '../../img/logo_pej2025_01.png',
+      imageUrl: '../../img/logo_transformando.png',
       imageHeight: 200,
       title: 'Tienes documentos pendientes por cargar',
-      html: 'Has cargado <b>'+cont+'</b> de 11 documentos para postularte al PEJ2026.',
+      html: 'Has cargado <b>'+cont+'</b> de 11 documentos para postularte de Transformando Espacios.',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
@@ -236,10 +236,10 @@ function contador(){
 
     Swal.fire({
       icon: 'success',
-      imageUrl: '../../img/logo_pej2025_01.png',
+      imageUrl: '../../img/logo_transformando.png',
       imageHeight: 200,
       title: 'Proceso finalizado',
-      html: 'Has cargado los <strong>11 documentos</strong> para postularte al <strong>PEJ2026</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación al PEJ2026.</p><p><a href="https://forms.gle/iLMZR3EWTwvpPmA1A" target="_blank">Encuesta</a></p>',
+      html: 'Has cargado los <strong>11 documentos</strong> para postularte de <strong>Transformando Espacios</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación de Transformando Espacios.</p><p><a href="https://forms.gle/iLMZR3EWTwvpPmA1A" target="_blank">Encuesta</a></p>',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
@@ -261,14 +261,14 @@ function categoriaCompleta(){
     success: function(data)
     {
       
-      var jsonData = JSON.parse(JSON.stringify(data));
-      var successCategoria = jsonData.cat;
+      // var jsonData = JSON.parse(JSON.stringify(data));
+      let successCategoria = data.cat;
       if(successCategoria != null || successCategoria !=""){
-      	console.log('es el data de JSON cat '+jsonData.cat);
+      	console.log('es el data de JSON cat '+successCategoria);
 
       var elemento = document.getElementById('categoriaOut');
-      elemento.value = jsonData.cat;
-	console.log(jsonData.cat);
+      elemento.innerText = successCategoria;
+	console.log(successCategoria);
       // $('#resultSpan').html(data);
       }
     }
