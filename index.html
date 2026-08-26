@@ -59,7 +59,6 @@
     </header>
 
     <main class="px-3" id="preForm">
-        <!-- <p class="text-center mt-2"><img src="img/logo_gob_2023.png" width="54%" alt="" id="imgLogoGob"></p> -->
         <hr>
         <p class="text-center"><img src="img/logo_transformando.png" width="100%" alt="" id="imgLogo"></p>
         <hr>
@@ -129,10 +128,11 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="bi bi-grid-3x3-gap-fill"></i></span>
                         <select class="form-control" id="categoria" onclick="alertaC()" onchange="descripcionesCat(this.value)" required></select>
+                        
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="bi bi-braces-asterisk"></i></span>
-                        <input type="text" class="form-control" placeholder="CURP" id="curp" oninput="curp2date(this)" onkeyup="javascript:this.value=this.value.toUpperCase();" onblur="validarInput(this);" required>
+                        <input type="text" class="form-control" placeholder="CURP" id="curp" onkeyup="javascript:this.value=this.value.toUpperCase();" onblur="validarInput(this);" required>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="bi bi-123"></i></span>
@@ -146,6 +146,7 @@
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="bi bi-passport"></i></span>
                         <input type="password" class="form-control" placeholder="Contraseña" id="pwd" required>
+                        <span class="input-group-text"><a href="#" onclick="verPwd()"><i class="bi bi-eye-fill"></i></a></span>
                     </div>
                     <p><span class="text-dark">Verificación</span></p>
                     <div id="result-username" class="mb-0 g-0">
@@ -154,9 +155,9 @@
                     <div id="result-username2">
                         <div class="alert alert-secondary text-start"><strong><i class="bi bi-arrow-right-circle-fill"></i> REGISTRO.</strong> Se verificará tu usuario.</div>
                     </div>
-                    <div id="result-username3">
+                    <!-- <div id="result-username3">
                         <div class="alert alert-secondary text-start"><strong><i class="bi bi-arrow-right-circle-fill"></i> EDAD.</strong> Se verificará tu edad (12-29 años).</div>
-                    </div>
+                    </div> -->
                     <div class="modal-footer bg-light">
                         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cerrar</button>
                         <button type="submit" class="btn btn-outline-primary" id="boton_submit" hidden><i class="bi bi-plus-circle-fill"></i> Registrarse</button>
@@ -218,6 +219,14 @@ function timer() {
             console.log("I was closed by the timer");
         }
     });
+}
+function verPwd() {
+    var pwdInput = document.getElementById("pwd");
+    if (pwdInput.type === "password") {
+        pwdInput.type = "text";
+    } else {
+        pwdInput.type = "password";
+    }
 }
 </script>
 
