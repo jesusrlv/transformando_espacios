@@ -270,7 +270,7 @@ else{
       <!-- acordeones de carga de documentos -->
        <div class="accordion" id="accordionExample">
         
-        <div class="accordion-item" id="etapa1">
+        <div class="accordion-item etapa1" id="etapa1" hidden>
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               <strong class="me-1">Etapa 1: </strong> Carga de documentos | <small class="ms-1"> Revisa los documentos que has cargado</small>
@@ -290,6 +290,7 @@ else{
             </div>
           </div>
         </div>
+
         <div class="accordion-item" id="etapa2" hidden>
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">

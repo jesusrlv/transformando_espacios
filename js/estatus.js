@@ -8,9 +8,9 @@ function estatus2() {
     type: "POST",
     dataType: "json",
     success: function (data) {
-      if (data.etapa1 == 1) {
+      if (data.etapa1 == 0 || data.etapa1 == null) {
         if (etapa1) {
-          etapa1.removeAttribute("hidden");
+          etapa1.hidden = false;
         }
       }
       else {
@@ -20,22 +20,22 @@ function estatus2() {
       }
       if (data.etapa2 == 1) {
         if (etapa2) {
-          etapa2.removeAttribute("hidden");
+          etapa2.hidden = false;
         }
       }
       else {
         if (etapa2) {
-          etapa2.setAttribute("hidden", "hidden");
+          etapa2.hidden = true;
         }
       }
       if (data.etapa3 == 1) {
         if (etapa3) {
-          etapa3.removeAttribute("hidden");
+          etapa3.hidden = false;
         }
       }
       else {
         if (etapa3) {
-          etapa3.setAttribute("hidden", "hidden");
+          etapa3.hidden = true;
         }
       }
     },
