@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 24-08-2026 a las 19:55:15
+-- Tiempo de generación: 05-10-2026 a las 23:50:22
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 7.4.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `p25_2`
+-- Base de datos: `rescate_espacios_dashboard`
 --
 
 -- --------------------------------------------------------
@@ -1834,17 +1834,22 @@ CREATE TABLE `catalogo_documentos` (
 --
 
 INSERT INTO `catalogo_documentos` (`id`, `documento`, `subtitulo`, `descripcion`, `link`) VALUES
-(1, 'Carta Propuesta', 'Carta Propuesta', 'Emitida por alguna institución, organismo, dependencia, agrupación o proponerse a si mismo.', '0'),
-(2, 'Currículum Vitae', 'Currículum Vitae', 'Currículum Vitae actualizado con datos generales.', '0'),
-(3, 'Semblanza trayectoria', 'Semblanza trayectoria', 'Semblanza trayectoria (máximo una cuartilla)', '0'),
-(4, 'Copia acta de nacimiento', 'Copia acta de nacimiento', 'Copia acta de nacimiento', '0'),
-(5, 'Copia INE', 'Copia INE', 'Copia de credencial de elector del interesado o del tutor', '0'),
-(6, 'Copia simple de comprobante de domicilio', 'Copia simple de comprobante de domicilio', 'Copia simple de comprobante de domicilio no mayor a 3 meses', '0'),
-(7, 'CURP', 'CURP', 'CURP en PDF', '0'),
-(8, 'Material bibliográfico', 'Material bibliográfico', 'Material bibliográfico, audiovisual y/o gráficos.', '0'),
-(9, 'Cápsula video', 'Cápsula video', 'Link de video que no dure más de 60 segundos (Youtube de preferencia)', '0'),
-(10, 'Carta protesta de decir verdad', 'Carta protesta de decir verdad', 'Carta protesta de decir verdad donde especifica no ser servidor público', NULL),
-(11, 'Constancia de situación fiscal', 'Constancia de situación fiscal', 'Constancia de situación fiscal emitida por el SAT', NULL);
+(1, 'Acta de cabildo', 'Acta de cabildo', 'El cargo que representa deberá estar constituido mediante orden del H. Cabildo Municipal, para lo cual deberán presentar copia simple del acta respectiva de su creación', '0'),
+(2, 'Nombramiento instancia', 'Nombramiento instancia', 'Copia de Nombramiento como titular de la Instancia Municipal de la Juventud y/o autoridad equivalente que presenta el proyecto.', '0'),
+(3, 'Formato de verificación ', 'Formato de verificación ', 'Formato de verificación “Transformando Espacios por el Progreso”\nadecuadamente llenado. Disponible en el sitio web\nhttps://juventud.zacatecas.gob.mx', '0'),
+(4, 'Fotografías', 'Fotografías', '5 fotos interiores y 5 fotos exteriores del espacio de forma física y a color.', '0'),
+(5, 'Carta intención', 'Carta intención', 'Carta intención de participar y coinvertir firmada por la persona que funge como Presidente o Presidenta Municipal.', '0'),
+(6, 'Ubicación', 'Ubicación', 'Ubicación del lugar en aplicación Google Earth, (Captura de pantalla).', '0'),
+(7, 'Credencial de elector', 'Credencial de elector', 'Copia de Credencial de elector de la persona que funge como\nPresidente o Presidenta Municipal, de la persona que funge como Sinda o Sindico Municipal y de la persona que funge como Director o Directora de la Instancia Municipal de la Juventud y/o autoridad equivalente.', '0'),
+(8, 'Constancia de Mayoría expedida por el IEEZ', 'Constancia de Mayoría expedida por el IEEZ', 'Copia de Constancia de Mayoría expedida por el IEEZ donde\nestablezca nombre de la persona que funge como Presidente o\nPresidenta y de la persona que funge como Sindico o Sindica electo.', '0'),
+(9, 'Constancia de situación Fiscal', 'Constancia de situación Fiscal', 'Constancia de situación Fiscal del Registro Federal de Contribuyentes\nde la Presidencia Municipal, donde se establezca el domicilio legal emitida por el SAT, no mayor a 3 meses', '0'),
+(10, 'Comprobante de domicilio', 'Comprobante de domicilio', 'Comprobante de domicilio de la Presidencia municipal, no mayor a 3\nmeses', NULL),
+(11, 'Expediente técnico del proyecto', 'Expediente técnico del proyecto', 'Expediente técnico del proyecto a rehabilitar, recuperar y/o equipar\ndeberá contener mínimo los siguientes puntos; Descripción del espacio, ubicación, cronograma de actividades, si cuenta con renders anexarlos.', NULL),
+(12, 'Placa', 'Placa', 'Foto de placa de acero inoxidable', NULL),
+(13, '2 cotizaciones', '2 cotizaciones', 'Presentar como mínimo, 2 cotizaciones de todos los conceptos que se requieren para la correcta ejecución del proyecto.', NULL),
+(14, 'Cumplimiento de Obligaciones Fiscales Estatales', 'Cumplimiento de Obligaciones Fiscales Estatales', 'Opinión de Cumplimiento de Obligaciones Fiscales Estatales emitida por la Secretaria de Finanzas del Estado de Zacatecas no mayor a 3 meses.', NULL),
+(15, 'Situación jurídica del espacio', 'Situación jurídica del espacio', 'Documento que ampare la situación jurídica del espacio que se pretende rehabilitar y/o equipar.', NULL),
+(16, 'Acta de sesión de cabildo', 'Acta de sesión de cabildo', 'Acta de sesión de cabildo donde mencione lo siguiente:\r\na) Mencione que pretende participar en el Programa.\r\nb) Que autoriza poder ejercer recursos para el proyecto a rehabilitar\r\ny/o equipar a través de coinversión.\r\nc) Mencionar espacio que será intervenido.', NULL);
 
 -- --------------------------------------------------------
 
@@ -1862,22 +1867,8 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`id`, `nombre`) VALUES
-(1, 'LOGRO ACADÉMICO (12 - 18 AÑOS)'),
-(2, 'LOGRO ACADÉMICO (19 - 29 AÑOS)'),
-(3, 'DISCAPACIDAD E INTEGRACIÓN'),
-(4, 'INGENIO EMPRENDEDOR'),
-(5, 'RESPONSABILIDAD SOCIAL'),
-(6, 'MÉRITO MIGRANTE'),
-(7, 'MÉRITO CAMPESINO'),
-(8, 'PROTECCIÓN AL MEDIO AMBIENTE'),
-(9, 'CULTURA CÍVICA, POLÍTICA Y DEMOCRACIA'),
-(10, 'LITERATURA'),
-(11, 'ARTES ESCÉNICAS (MÚSICA)'),
-(12, 'ARTES ESCÉNICAS (TEATRO)'),
-(13, 'ARTES ESCÉNICAS (DANZA)'),
-(14, 'ARTES PLÁSTICAS, VISUALES Y POPULARES'),
-(15, 'ARTE URBANO'),
-(16, 'CIENCIA Y TECNOLOGÍA (CIENCIAS APLICADAS)');
+(1, 'Ayuntamientos municipales'),
+(2, 'Instituciones educativas');
 
 -- --------------------------------------------------------
 
@@ -3363,7 +3354,32 @@ INSERT INTO `documentos` (`id`, `documento`, `id_ext`, `link`, `fecha`) VALUES
 (1472, 6, 624, 'docs/archivo6_624.pdf', '2025-07-01 00:00:00'),
 (1473, 7, 624, 'docs/archivo7_624.pdf', '2025-07-01 00:00:00'),
 (1474, 10, 624, 'docs/archivo10_624.pdf', '2025-07-01 00:00:00'),
-(1475, 11, 624, 'docs/archivo11_624.pdf', '2025-07-01 00:00:00');
+(1475, 11, 624, 'docs/archivo11_624.pdf', '2025-07-01 00:00:00'),
+(1476, 11, 654, 'docs/archivo11_654.pdf', '2026-08-25 15:44:44'),
+(1477, 10, 654, 'docs/archivo10_654.pdf', '2026-08-25 15:45:00'),
+(1478, 7, 654, 'docs/archivo7_654.pdf', '2026-08-25 15:45:16'),
+(1479, 2, 654, 'docs/archivo2_654.pdf', '2026-08-25 15:45:26'),
+(1480, 1, 654, 'docs/archivo1_654.pdf', '2026-08-25 15:45:40'),
+(1481, 3, 654, 'docs/archivo3_654.pdf', '2026-08-25 15:45:54'),
+(1482, 4, 654, 'docs/archivo4_654.pdf', '2026-08-25 15:47:01'),
+(1483, 5, 654, 'docs/archivo5_654.pdf', '2026-08-25 15:47:09'),
+(1484, 6, 654, 'docs/archivo6_654.pdf', '2026-08-25 15:47:20'),
+(1485, 9, 654, 'https://www.youtube.com/watch?v=e6PkGDH4wWA&t=4807s', '2026-08-25 15:51:27'),
+(1486, 8, 654, 'docs/archivo8_654.pdf', '2026-08-25 15:48:03');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estatus`
+--
+
+CREATE TABLE `estatus` (
+  `id` int(11) NOT NULL,
+  `etapa1` int(11) NOT NULL,
+  `etapa2` int(11) NOT NULL,
+  `etapa3` int(11) NOT NULL,
+  `id_ext` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -3573,7 +3589,7 @@ INSERT INTO `usr` (`id`, `usr`, `pwd`, `perfil`, `curp`, `nombre`, `edad`, `muni
 (274, 'VAHD980731MZSLRN03', '0', 2023, 'VAHD980731MZSLRN03', 'VAHD980731MZSLRN03', 0, 0, '0', 2023),
 (275, 'GABS980911MZSLNR00', '0', 2023, 'GABS980911MZSLNR00', 'GABS980911MZSLNR00', 0, 0, '0', 2023),
 (276, 'RORA940510HZSDDL08', '0', 2023, 'RORA940510HZSDDL08', 'RORA940510HZSDDL08', 0, 0, '0', 2023),
-(281, 'tecnologias.injuventud@gmail.com', 'montserrat29', 0, 'SAAS990209MZSLRN09', 'Sonia Montserrat Saldivar Arteaga', 25, 31, '4921232458', 1),
+(281, 'tecnologias.injuventud@gmail.com', 'montserrat29', 1, 'SAAS990209MZSLRN09', 'Sonia Montserrat Saldivar Arteaga', 25, 31, '4921232458', 1),
 (428, 'ulisearamirez12@gmail.com', 'vozbrillante5', 1, 'RASU060505HZSMLLA0', 'Jose ulises Ramirez Silva ', 19, 56, '492 125 9192', 9),
 (429, 'anaisgaar@gmail.com', 'Freseando04', 1, 'GABK041204MZSRXRA2', 'Anaís García ', 20, 56, '4921438227', 4),
 (430, 'dolly_414@hotmail.com', 'Camj88metz', 1, 'EOCM090710MZSSSTA4', 'Metztli Escobedo Castañeda ', 15, 17, '4925441296', 1),
@@ -3800,7 +3816,7 @@ INSERT INTO `usr` (`id`, `usr`, `pwd`, `perfil`, `curp`, `nombre`, `edad`, `muni
 (651, 'mildredlorenajdl@gmail.com', 'mildredjdl', 1, 'EIOD100930HZSLRRA1', 'Derek Elías Ortiz', 14, 37, '4961129516', 1),
 (652, 'mariadavilacamacho@gmail.com', 'Maria.1', 1, 'DACG071115MZSVMDA6', 'Maria Guadalupe Dávila Camacho ', 17, 45, '4941655578', 1),
 (653, 'perezchavezgabriel.17@gmail.com', 'gabosemi12', 1, 'PECG030712HZSRHBA5', 'Gabriel Pérez Chávez ', 21, 5, '478 110 8966 ', 8),
-(654, 'i2d.leolugo@gmail.com', 'Georgia2025', 1, 'LUSL000425HZSGLNA2', 'Leonardo Josue Lugo Salas', 25, 56, '4921604677', 16);
+(654, 'i2d.leolugo@gmail.com', 'Georgia2025', 1, 'LUSL000425HZSGLNA2', 'Leonardo Josue Lugo Salas', 25, 56, '4921604677', 1);
 
 --
 -- Índices para tablas volcadas
@@ -3828,6 +3844,12 @@ ALTER TABLE `categorias`
 -- Indices de la tabla `documentos`
 --
 ALTER TABLE `documentos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `estatus`
+--
+ALTER TABLE `estatus`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -3862,7 +3884,7 @@ ALTER TABLE `calificacion`
 -- AUTO_INCREMENT de la tabla `catalogo_documentos`
 --
 ALTER TABLE `catalogo_documentos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
@@ -3874,7 +3896,13 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `documentos`
 --
 ALTER TABLE `documentos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1476;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1487;
+
+--
+-- AUTO_INCREMENT de la tabla `estatus`
+--
+ALTER TABLE `estatus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `grado`
