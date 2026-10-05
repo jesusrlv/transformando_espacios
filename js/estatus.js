@@ -7,37 +7,40 @@ function estatus2() {
     url: "query/estatus.php",
     type: "POST",
     dataType: "json",
-    success: function (data) {
+    success: function(data) {
       if (data.etapa1 == 0 || data.etapa1 == null) {
-        if (etapa1) {
-          etapa1.hidden = false;
-        }
-      }
-      else {
-        if (etapa1) {
+       
           etapa1.hidden = true;
-        }
+       
       }
-      if (data.etapa2 == 1) {
-        if (etapa2) {
-          etapa2.hidden = false;
-        }
+      else if (data.etapa1 == 1) {
+       
+          etapa1.hidden = false;
+    
       }
-      else {
-        if (etapa2) {
+
+      if (data.etapa2 == 0 || data.etapa2 == null) {
+        
           etapa2.hidden = true;
-        }
+        
       }
-      if (data.etapa3 == 1) {
-        if (etapa3) {
-          etapa3.hidden = false;
-        }
+      else if (data.etapa2 == 1) {
+        
+          etapa2.hidden = false;
+        
       }
-      else {
-        if (etapa3) {
+
+      if (data.etapa3 == 0 || data.etapa3 == null) {
+        
           etapa3.hidden = true;
-        }
+        
       }
+      else if (data.etapa3 == 1) {
+
+          etapa3.hidden = false;
+        
+      }
+
     },
     error: function (xhr, status, error) {
       console.error("Error en la solicitud AJAX:", error);
