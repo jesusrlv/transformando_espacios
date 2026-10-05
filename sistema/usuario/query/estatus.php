@@ -31,7 +31,7 @@ if ($resultadosql->num_rows > 0) {
     $etapa3 = $row['etapa3'];
 } else {
     // NO hay datos, asignar ceros
-    $etapa1 = 0;
+    $etapa1 = 1;
     $etapa2 = 0;
     $etapa3 = 0;
 }

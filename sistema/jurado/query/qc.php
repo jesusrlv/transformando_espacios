@@ -1,4 +1,4 @@
-+<?php
+<?php
 
 // $servername="localhost";
 //     $database="c2pej2024"; //solo se quitó para conexión remota
