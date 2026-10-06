@@ -65,12 +65,14 @@
                         </select>
                 </div>
 
-
+            </form>
+            <!-- Aquí corresponde cerrar el <form>, antes del cierre de .modal-body. -->
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Actualizar</button>
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cerrar</button>
-                </form>
+                <!-- Este cierre actual del <form> queda demasiado abajo, dentro de .modal-footer. -->
+                
             </div>
             </div>
         </div>

@@ -304,8 +304,8 @@ else{
               
                 <?php include('query/docs_2.php'); ?>
 
-              </div>
-              <!-- fin row -->
+              </div><!-- fin row -->
+              
              <!-- body acordeon -->
             </div>
           </div>
@@ -361,25 +361,26 @@ else{
   </div>
 </footer>
 
-    <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-  </body>
-</html>
-
-<script>
-    $("a[href^='#']").click(function(e) {
-    e.preventDefault();
-    
-    var position = $($(this).attr("href")).offset().top;
-
-    $("body, html").animate({
-        scrollTop: position
-    } /* speed */ );
-});
-</script>
-
 <!-- modal datos visualizar -->
+<!-- Estos includes deben quedar dentro de <body>, antes de </body>; actualmente aparecen después de </html>. -->
 <?php 
   include('query/visualizar_datos.php');
   include('prcd/editar_datos.php');
 ?>
+</body>
+</html>
+
+<script>
+  $("a[href^='#']").click(function(e) {
+    e.preventDefault();
+    
+    var position = $($(this).attr("href")).offset().top;
+    
+    $("body, html").animate({
+      scrollTop: position
+    } /* speed */ );
+  });
+</script>
+
+<script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
+

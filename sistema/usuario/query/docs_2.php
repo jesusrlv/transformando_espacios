@@ -154,12 +154,13 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                   <br>
                 <?php
                 echo'
+              <!-- El </form> de este modal debe ir antes de cerrar .modal-body. -->
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
                 <button id="btnGuardar'.$idDoc.'" type="button" class="btn btn-primary" onclick="uploadVideo('.$idDoc.','.$id.')">Guardar</button>
               </div>
-              </form>
+              
             </div>
           </div>
         </div>
@@ -173,7 +174,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="window.location.reload();"></button>
               </div>
               <div class="modal-body">
-                <form id="upload_form" terget="#">';
+                <form id="upload_form" target="#">';
                 ?>
 
                   <div class="input-group mb-3">
@@ -183,6 +184,8 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                   <br>
                 <?php
                 echo'
+              <!-- El </form> de este modal debe ir antes de cerrar .modal-body. -->
+              </form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
