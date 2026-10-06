@@ -190,7 +190,7 @@ else{
     <section class="text-center container">
     <div class="row py-lg-5"  >
       <div class="col-lg-6 col-md-8 mx-auto rounded p-2" id="colorRounded">
-        <h1 class="fw-light"><img src="../../img/logo_transformando.png" alt="" width="100%" style="padding:10px; border-radius: 15px;"></h1>
+        <h1 class="fw-light"><img src="../../img/logo_transformando_2.jpeg" alt="" width="100%" style="padding:10px; border-radius: 15px; opacity: 0.8;"></h1>
         <h2 class="fw-bold" style="color:white"><i class="bi bi-person-circle"></i></h2>
         <h2 class="fw-bold" style="color:white">Bienvenid@</h2>
         <h2 class="fw-bold" style="color:white"><?php echo $nombre ?></h2>
@@ -298,7 +298,15 @@ else{
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+             <!-- body acordeon -->
+              <!-- inicio row -->
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              
+                <?php include('query/docs_2.php'); ?>
+
+              </div>
+              <!-- fin row -->
+             <!-- body acordeon -->
             </div>
           </div>
         </div>
@@ -310,7 +318,15 @@ else{
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+             <!-- body acordeon -->
+              <!-- inicio row -->
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              
+                <?php include('query/docs_3.php'); ?>
+
+              </div>
+              <!-- fin row -->
+             <!-- body acordeon -->
             </div>
           </div>
         </div>

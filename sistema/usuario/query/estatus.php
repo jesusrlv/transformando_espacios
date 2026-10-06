@@ -39,8 +39,10 @@ if ($resultadosql->num_rows > 0) {
 // Devolver JSON siempre con valores
 echo json_encode(array(
     'etapa1' => $etapa1,
-    'etapa2' => $etapa2,
-    'etapa3' => $etapa3
+    // 'etapa2' => $etapa2,
+    'etapa2' => 1,
+    // 'etapa3' => $etapa3
+    'etapa3' => 1
 ));
 
 $stmt->close();

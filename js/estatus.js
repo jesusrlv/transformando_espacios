@@ -48,5 +48,3 @@ function estatus2() {
   });
   
 }
-
-estatus2();
