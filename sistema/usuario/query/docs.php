@@ -1,7 +1,7 @@
 <?php
 include('qc.php');
 
-$sqlQuery = "SELECT * FROM catalogo_documentos ORDER BY id ASC";
+$sqlQuery = "SELECT * FROM catalogo_documentos WHERE etapa = 1 ORDER BY id ASC";
 $resultadoQuery = $conn -> query($sqlQuery);
 $noCatalogoquery = mysqli_num_rows($resultadoQuery);
 // $rowQuery = $resultadoQuery ->fetch_assoc();
@@ -155,11 +155,12 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 <?php
                 echo'
               </div>
+              </form>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
                 <button id="btnGuardar'.$idDoc.'" type="button" class="btn btn-primary" onclick="uploadVideo('.$idDoc.','.$id.')">Guardar</button>
               </div>
-              </form>
+            
             </div>
           </div>
         </div>
@@ -184,11 +185,12 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 <?php
                 echo'
               </div>
+              </form>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
                 <button type="button" class="btn btn-primary" onclick="editVideo('.$idDoc.','.$id.')" id="btnEditar'.$idDoc.'">Editar</button>
               </div>
-              </form>
+              
             </div>
           </div>
         </div>

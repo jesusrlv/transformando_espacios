@@ -86,6 +86,28 @@ require('conn/qc.php');
         }  
     $resultado_sql = $conn->query($sql);
     if($resultado_sql){
+
+    $sqlSQLInsert = "SELECT * FROM usr WHERE curp = '$curp'";
+    $resultado_sqlInsert = $conn->query($sqlSQLInsert);
+    $fila = $resultado_sqlInsert->num_rows;
+    if($fila > 0){
+        $row = $resultado_sqlInsert->fetch_assoc();
+        $id = $row['id'];
+        $sqlInsert = "INSERT INTO estatus (
+            id_ext,
+            etapa1,
+            etapa2,
+            etapa3
+            )
+            VALUES(
+                '$id',
+                '1',
+                '0',
+                '0'
+            )
+            ";
+            $resultado_sqlInsert = $conn->query($sqlInsert);
+    }4
         echo json_encode(array('success' => 1));
         
     }

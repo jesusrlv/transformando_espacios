@@ -154,7 +154,8 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                   <br>
                 <?php
                 echo'
-              <!-- El </form> de este modal debe ir antes de cerrar .modal-body. -->
+              <!-- AQUI FALTA </form> de Cargar video: despues del <br> y antes de cerrar .modal-body. -->
+              </form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
@@ -191,7 +192,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
                 <button type="button" class="btn btn-primary" onclick="editVideo('.$idDoc.','.$id.')" id="btnEditar'.$idDoc.'">Editar</button>
               </div>
-              </form>
+             
             </div>
           </div>
         </div>
