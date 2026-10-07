@@ -59,8 +59,8 @@
     </header>
 
     <main class="px-3" id="preForm">
-        <hr>
-        <p class="text-center"><img src="img/logo_transformando.png" width="100%" alt="" id="imgLogo"></p>
+        <p class="mt-2"></p>
+        <p class="text-center"><img src="img/logo_transformando_2.jpeg" width="100%" alt="" id="imgLogo" style="opacity: 0.8;" class="img-fluid rounded-1"></p>
         <hr>
         
         <!-- ✅ FORM corregido y bien cerrado -->
@@ -75,24 +75,25 @@
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-fingerprint"></i></span>
                         <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1" name="pwd" required>
                     </div>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button class="btn btn-primary" type="submit"><i class="bi bi-key-fill"></i> Acceso</button>
-                    </div>
                 </div>
             </div>
-        </form> <!-- ✅ Cierre correcto del form -->
+        
         
         <hr class="w-100 text-center">
         <div class="d-grid gap-2 col-8 mx-auto" id="bloquearMDL">
             <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit"><i class="bi bi-key-fill"></i> Acceso</button>
+        </form> <!-- ✅ Cierre correcto del form -->
                 <a href="#" type="button" style="text-decoration:none ;text-decoration-color: aliceblue;" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#registro"><i class="bi bi-person-plus-fill"></i> Registro</a>
             </div>
-            <h6 class="text-light mt-2 text-center"><a href="#" style="text-decoration:none;" class="text-light" data-bs-toggle="modal" data-bs-target="#pwdRecuperar"><small>¿Olvidaste tu contraseña?</small></a></h6>
+            
+            <h6 class="text-light mt-2 text-center"><a href="#" style="text-decoration:none;" class="text-light icon-link icon-link-hover" data-bs-toggle="modal" data-bs-target="#pwdRecuperar"><small>¿Olvidaste tu contraseña?</small></a></h6>
         </div>
         <div class="d-grid gap-2 col-12 mx-auto">
             
             <span class="text-secondary text-center text-light"><small><strong>Desarrollo:<br></strong>Departamento de Tecnologías de la Información | INJUVENTUD</small></span>
         </div>
+        <p class="mb-2"></p>
     </main>
 
     <footer class="mt-auto text-white-50">
@@ -155,9 +156,7 @@
                     <div id="result-username2">
                         <div class="alert alert-secondary text-start"><strong><i class="bi bi-arrow-right-circle-fill"></i> REGISTRO.</strong> Se verificará tu usuario.</div>
                     </div>
-                    <!-- <div id="result-username3">
-                        <div class="alert alert-secondary text-start"><strong><i class="bi bi-arrow-right-circle-fill"></i> EDAD.</strong> Se verificará tu edad (12-29 años).</div>
-                    </div> -->
+                   
                     <div class="modal-footer bg-light">
                         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cerrar</button>
                         <button type="submit" class="btn btn-outline-primary" id="boton_submit" hidden><i class="bi bi-plus-circle-fill"></i> Registrarse</button>

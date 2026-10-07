@@ -127,16 +127,14 @@ $(document).ready(function() {
             data: $(this).serialize(),
             success: function(response)
             {
-                // var jsonData = JSON.parse(response);
+
                 var jsonData = JSON.parse(JSON.stringify(response));
  
-
               if (jsonData.success == "1")
                 {
-                    // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_transformando.png',
+                        imageUrl: 'img/logo_transformando_2.jpeg',
                         imageHeight: 200,
                         title: 'Acceso a postulante correcto',
                         text: 'Credenciales correctas',
@@ -147,10 +145,9 @@ $(document).ready(function() {
 
                 else if (jsonData.success == "2")
                 {
-                    // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_transformando.png',
+                        imageUrl: 'img/logo_transformando_2.jpeg',
                         imageHeight: 200,
                         title: 'Usuario Admin correcto',
                         text: 'Credenciales correctas',
@@ -161,10 +158,9 @@ $(document).ready(function() {
 
                 else if (jsonData.success == "3")
                 {
-                    // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_transformando.png',
+                        imageUrl: 'img/logo_transformando_2.jpeg',
                         imageHeight: 200,
                         title: 'Usuario Jurado correcto',
                         text: 'Credenciales correctas',
@@ -174,10 +170,9 @@ $(document).ready(function() {
                 }
                 else if (jsonData.success == "5")
                 {
-                    // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_transformando.png',
+                        imageUrl: 'img/logo_transformando_2.jpeg',
                         imageHeight: 200,
                         title: 'Usuario Migrtante correcto',
                         text: 'Credenciales correctas',
@@ -187,10 +182,10 @@ $(document).ready(function() {
                 }
                 else if (jsonData.success == "4")
                 {
-                    // location.href = 'my_profile.php';
+                    
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_transformando.png',
+                        imageUrl: 'img/logo_transformando_2.jpeg',
                         imageHeight: 200,
                         title: 'Usuario Notario correcto',
                         text: 'Credenciales correctas',
@@ -200,7 +195,7 @@ $(document).ready(function() {
                 }
                 else
                 {
-                    // alert('Invalid Credentials!');
+                    
                     Swal.fire({
                         icon: 'error',
                         title: 'Datos incorrectos',
@@ -257,7 +252,7 @@ $(document).ready(function() {
             type: "POST",
             url: 'prcd/registro.php',
             dataType:'json',
-            // data: $(this).serialize(),
+            
             data:{
                 nombre:nombre,
                 municipio:municipio,
@@ -270,7 +265,7 @@ $(document).ready(function() {
             },
             success: function(response)
             {
-                // var jsonData = JSON.parse(response);
+                
                 var jsonData = JSON.parse(JSON.stringify(response));
                 // user is logged in successfully in the back-end
                 // let's redirect
@@ -278,7 +273,7 @@ $(document).ready(function() {
                 {
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo.png',
+                        imageUrl: 'img/logo_transformando_2.jpeg',
                         imageHeight: 200,
                         title: 'Registro exitoso',
                         text: 'Bienvenido(a) al Sistema de Postulación PEJ2026',
@@ -322,7 +317,6 @@ function loaded() {
 
 // BLOQUEO DE MODALS
 function bloquearMDS(){
-    // var dateBLQ = '2023-02-04,00:00:01';
     let dateBLQ = new Date("2023-03-02 00:00:01");
     $.ajax({
             type: "POST",
@@ -333,7 +327,6 @@ function bloquearMDS(){
             },
             success: function(response)
             {
-                // var jsonData = JSON.parse(response);
                 var jsonData = JSON.parse(JSON.stringify(response));
                 // user is logged in successfully in the back-end
                 // let's redirect
@@ -363,9 +356,7 @@ function descripcionesCat(desc){
             confirmButtonText:
               '<i class="fa fa-thumbs-up"></i> Aceptar',
             confirmButtonAriaLabel: 'Aceptar',
-            // cancelButtonText:
-            //   '<i class="fa fa-thumbs-down"></i>',
-            // cancelButtonAriaLabel: 'Thumbs down'
+            
           })
     }
     else if(desc == 2){
