@@ -218,19 +218,19 @@ function contador(){
 
   });
   }
-  else if(cont >= 0 & cont < 11){
+  else if(cont >= 0 & cont < 22){
     Swal.fire({
       icon: 'warning',
       imageUrl: '../../img/logo_transformando_2.jpeg',
       imageHeight: 200,
       title: 'Tienes documentos pendientes por cargar',
-      html: 'Has cargado <b>'+cont+'</b> de 11 documentos para postularte de Transformando Espacios.',
+      html: 'Has cargado <b>'+cont+'</b> de 22 documentos para postularte de Transformando Espacios.',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
     });
   }
-  else if(cont == 11){
+  else if(cont == 22){
 
     document.getElementById('constanciaP').hidden=false;
 
@@ -239,7 +239,7 @@ function contador(){
       imageUrl: '../../img/logo_transformando_2.jpeg',
       imageHeight: 200,
       title: 'Proceso finalizado',
-      html: 'Has cargado los <strong>11 documentos</strong> para postularte de <strong>Transformando Espacios</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación de Transformando Espacios.</p><p><a href="https://forms.gle/iLMZR3EWTwvpPmA1A" target="_blank">Encuesta</a></p>',
+      html: 'Has cargado los <strong>22 documentos</strong> para postularte de <strong>Transformando Espacios</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación de Transformando Espacios.</p><p><a href="https://forms.gle/iLMZR3EWTwvpPmA1A" target="_blank">Encuesta</a></p>',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
