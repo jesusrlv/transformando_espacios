@@ -22,12 +22,12 @@ $resultadosql1 = $conn->query($sql1);
 $fila1 = $resultadosql1->num_rows;
 
 // VERIFICAR si hay resultados
-if ($fila1 >= 0 && $fila1 < 16) {
+if ($fila1 < 16) {
     // Hay datos, obtenerlos
     $etapa1 = 1;
     $etapa2 = 0;
     $etapa3 = 0;
-} else if ($fila1 >= 16 && $fila1 < 19) {
+} else if ($fila1 > 15 && $fila1 < 19) {
     // NO hay datos, asignar ceros
     $etapa1 = 1;
     $etapa2 = 1;
@@ -51,7 +51,6 @@ echo json_encode(array(
     'etapa3' => $etapa3
 ));
 
-$stmt->close();
 $conn->close();
 
 ?>

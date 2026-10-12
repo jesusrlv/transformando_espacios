@@ -33,7 +33,7 @@ $noCatalogoquery = mysqli_num_rows($resultadoQuery);
             </div>
         ';
         }
-        else if($no_resultados == 1 || $no_resultados == 2 || $no_resultados == 3 || $no_resultados == 4 || $no_resultados == 5 || $no_resultados == 6 || $no_resultados == 7 || $no_resultados == 8|| $no_resultados == 9 || $no_resultados == 10 ){
+        else if($no_resultados == 1 || $no_resultados == 2 || $no_resultados == 3 || $no_resultados == 4 || $no_resultados == 5 || $no_resultados == 6 || $no_resultados == 7 || $no_resultados == 8|| $no_resultados == 9 || $no_resultados == 10 || $no_resultados == 11 || $no_resultados == 12 || $no_resultados == 13 || $no_resultados == 14 || $no_resultados == 15 || $no_resultados == 16 || $no_resultados == 17 || $no_resultados == 18 || $no_resultados == 19 || $no_resultados == 20 || $no_resultados == 21){
             echo '
             <div class="col">
                 <div class="card border-primary text-light" style="height:300px;background-color: rgba(228, 3, 125, 0.9);">
@@ -50,7 +50,7 @@ $noCatalogoquery = mysqli_num_rows($resultadoQuery);
             </div>
             ';
         }
-        else if($no_resultados == 11){
+        else if($no_resultados == 22){
             echo '
             <div class="col">
                 <div class="card border-success" style="height:300px; background-color: rgba(25, 155, 216, 0.9);">
