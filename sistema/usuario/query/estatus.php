@@ -16,22 +16,30 @@ if (empty($id)) {
 }
 
 // Consulta preparada (más segura)
-$sql = "SELECT * FROM estatus WHERE id_ext = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $id); // "s" indica que el parámetro es una cadena
-$stmt->execute();
-$resultadosql = $stmt->get_result();
+// $sql = "SELECT * FROM estatus WHERE id_ext = ?";
+$sql1 = "SELECT COUNT(*) AS docs1 FROM documentos WHERE id_ext = $id";
+$resultadosql1 = $conn->query($sql1);
+$fila1 = $resultadosql1->num_rows;
 
 // VERIFICAR si hay resultados
-if ($resultadosql->num_rows > 0) {
+if ($fila1 >= 0 && $fila1 < 16) {
     // Hay datos, obtenerlos
-    $row = $resultadosql->fetch_assoc();
-    $etapa1 = $row['etapa1'];
-    $etapa2 = $row['etapa2'];
-    $etapa3 = $row['etapa3'];
-} else {
+    $etapa1 = 1;
+    $etapa2 = 0;
+    $etapa3 = 0;
+} else if ($fila1 >= 16 && $fila1 < 19) {
     // NO hay datos, asignar ceros
     $etapa1 = 1;
+    $etapa2 = 1;
+    $etapa3 = 0;
+} else if ($fila1 >= 19) {
+    // NO hay datos, asignar ceros
+    $etapa1 = 1;
+    $etapa2 = 1;
+    $etapa3 = 1;
+} else {
+    // Caso por defecto si no se cumplen las condiciones anteriores
+    $etapa1 = 0;
     $etapa2 = 0;
     $etapa3 = 0;
 }
@@ -39,10 +47,8 @@ if ($resultadosql->num_rows > 0) {
 // Devolver JSON siempre con valores
 echo json_encode(array(
     'etapa1' => $etapa1,
-    // 'etapa2' => $etapa2,
-    'etapa2' => 1,
-    // 'etapa3' => $etapa3
-    'etapa3' => 1
+    'etapa2' => $etapa2,
+    'etapa3' => $etapa3
 ));
 
 $stmt->close();
