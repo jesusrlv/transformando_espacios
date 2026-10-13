@@ -53,7 +53,7 @@ include('query/name.php');
         object-fit: cover;
         background-position: auto 100%; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: 100% 100%; /* Resize the background image to cover the entire container */
+        background-size: 100% 54%; /* Resize the background image to cover the entire container */
         /* background-position: center; */
         width:100%; 
         height:100%;

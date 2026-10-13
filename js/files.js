@@ -203,6 +203,104 @@ function editVideo(idDoc,idUsr){
 
 }
 
+function queryFotosAntes(idUsr, idDoc){
+  var idD = idDoc;
+  var idU = idUsr;
+  $.ajax({
+    type: "POST",
+    url: 'query/fotos_antes.php',
+    dataType:'html',
+    data:{
+        idD:idD,
+        idU:idU
+    },
+    success: function(data){
+      $('#listSocialMM1'+idDoc).fadeIn(1000).html(data);
+    }
+  });
+}
+
+function cargarFotosAntes(idDoc,idUsr){
+  var link = document.getElementById('linkSocial'+idDoc).value;
+  var idD = idDoc;
+  var idU = idUsr;
+  if(link == ""){
+    alert("El campo de link no puede estar vacío");
+    return false;
+  }
+  $.ajax({
+    type: "POST",
+    url: 'prcd/upload_fotos_antes.php',
+    dataType:'json',
+    data:{
+        idD:idD,
+        idU:idU,
+        link:link
+    },
+    success: function(response)
+    {
+       
+        var jsonData = JSON.parse(JSON.stringify(response));
+        var successLinks = jsonData.success;
+        if (successLinks == "1"){
+
+          Swal.fire({
+            icon: 'success',
+            imageUrl: '../../img/starlikes.png',
+            imageHeight: 400,
+            title: 'Foto cargada',
+            text: 'Proceso correcto',
+            confirmButtonColor: '#3085d6',
+            footer: 'INJUVENTUD'
+
+        });
+
+        document.getElementById('linkSocial'+idDoc).value = "";
+        queryFotosAntes(idUsr, idDoc);
+      }
+
+    }
+});
+
+}
+
+function deleteFotosAntes(idUsr,idDoc,id){
+  
+  if(confirm("¿Estás seguro de que deseas eliminar esta foto?")){
+  
+  $.ajax({
+    type: "POST",
+    url: 'prcd/delete_fotos_antes.php',
+    dataType:'json',
+    data:{
+        id:id
+    },
+    success: function(response)
+    {
+        let jsonData = JSON.parse(JSON.stringify(response));
+        let successLinks = jsonData.success;
+        if (successLinks == 1){
+          queryFotosAntes(idUsr, idDoc);
+          Swal.fire({
+            icon: 'success',
+            imageUrl: '../../img/starlikes.png',
+            imageHeight: 400,
+            title: 'Foto eliminada',
+            text: 'Proceso correcto',
+            confirmButtonColor: '#3085d6',
+            footer: 'INJUVENTUD'
+
+          });
+        }
+    }
+  });
+  }
+  else{
+    alert("No se eliminó la foto");
+  }
+
+}
+
 function contador(){
   var cont = document.getElementById('contarDocs').value;
 

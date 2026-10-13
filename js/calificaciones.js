@@ -17,7 +17,7 @@ function calificar(id,documento,jurado){
             document.getElementById('editadCalf'+documento).hidden = false;
             Swal.fire({
                 icon: 'success',
-                imageUrl: '../../img/logo.png',
+                imageUrl: '../../img/logo_transformando_2.jpeg',
                 imageHeight: 200,
                 title: 'Documento calificado',
                 text: 'Proceso correcto',
@@ -47,7 +47,7 @@ function editarCalificacion(id,documento,jurado){
             // document.getElementById('editadCalf'+documento).hidden = false;
             Swal.fire({
                 icon: 'success',
-                imageUrl: '../../img/logo.png',
+                imageUrl: '../../img/logo_transformando_2.jpeg',
                 imageHeight: 200,
                 title: 'Calificación actualizada',
                 text: 'Proceso correcto',

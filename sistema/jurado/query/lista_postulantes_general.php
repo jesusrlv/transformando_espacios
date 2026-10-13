@@ -11,7 +11,7 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
     $resultadoContar = $conn->query($contador);
     $rowContar = $resultadoContar -> fetch_assoc();
     $numero = $rowContar['contar'];
-    if($numero == 11){
+    if($numero == 22){
         $calif = "SELECT * FROM calificacion WHERE id_ext = '$idDocs' AND id_jurado = '$id' ";
         $resultadoCalif = $conn->query($calif);
         $rowFila = $resultadoCalif->num_rows;
@@ -50,7 +50,7 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
             <span class="badge rounded-pill text-bg-warning">
             ';
         }
-        else if ($numero == 11){
+        else if ($numero == 22){
             echo'
             <span class="badge rounded-pill text-bg-primary">
             ';
