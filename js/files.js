@@ -239,7 +239,7 @@ function contador(){
       imageUrl: '../../img/logo_transformando_2.jpeg',
       imageHeight: 200,
       title: 'Proceso finalizado',
-      html: 'Has cargado los <strong>22 documentos</strong> para postularte de <strong>Transformando Espacios</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación de Transformando Espacios.</p><p><a href="https://forms.gle/iLMZR3EWTwvpPmA1A" target="_blank">Encuesta</a></p>',
+      html: 'Has cargado los <strong>22 documentos</strong> para postularte de <strong>Transformando Espacios</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación de Transformando Espacios.</p><p><a type="button" class="btn btn-warning" href="https://forms.gle/HDCRyNgo2i3gk64S9" target="_blank"><i class="bi bi-ui-checks"></i> Encuesta</a></p>',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
