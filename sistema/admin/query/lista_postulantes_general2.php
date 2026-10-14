@@ -100,7 +100,7 @@ while($rowCategoria = $resultadoCategorias->fetch_assoc()){
                 ';
         if ($noDocs == 0) {
             echo '<span class="badge bg-danger">'.$noDocs.'</span>';
-        } else if ($noDocs < 11 && $noDocs > 0) {
+        } else if ($noDocs < 22 && $noDocs > 0) {
             echo '<span class="badge bg-warning">'.$noDocs.'</span>';
         }
         else {

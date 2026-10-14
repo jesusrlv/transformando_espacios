@@ -82,20 +82,6 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
         	}
         	else if($rowFila == 3){
         	echo'
-            <span class="badge rounded-pill text-bg-warning">
-        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 2 documentos
-            </span>
-            ';
-        	}
-        	else if($rowFila == 4){
-        	echo'
-            <span class="badge rounded-pill text-bg-warning">
-        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 1 documento
-            </span>
-            ';
-        	}
-        	else if($rowFila == 5){
-        	echo'
             <span class="badge rounded-pill text-bg-success">
         	<i class="bi bi-check-circle-fill"></i> Calificado
             </span>

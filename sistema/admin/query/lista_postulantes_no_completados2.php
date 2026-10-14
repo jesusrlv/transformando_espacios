@@ -11,7 +11,7 @@ $i = 0;
 while($rowCategoria=$resultadoCategorias->fetch_assoc()){
     $categoria = $rowCategoria['id'];
 
-    // 🔹 Contador de participantes con MENOS de 11 documentos
+    // 🔹 Contador de participantes con MENOS de 22 documentos
     $sqlCount = "
         SELECT u.id
         FROM usr u
@@ -19,7 +19,7 @@ while($rowCategoria=$resultadoCategorias->fetch_assoc()){
         WHERE u.categoria = '$categoria' 
         AND u.perfil = 1
         GROUP BY u.id
-        HAVING COUNT(d.id_ext) < 11
+        HAVING COUNT(d.id_ext) < 22
     ";
     $resultCount = $conn->query($sqlCount);
     $total = $resultCount ? $resultCount->num_rows : 0;
@@ -69,7 +69,7 @@ while($rowCategoria=$resultadoCategorias->fetch_assoc()){
                     <tbody class="text-center" id="myTable'.$i.'">
     ';
 
-    // 🔹 Usuarios (solo < 11 documentos)
+    // 🔹 Usuarios (solo < 22 documentos)
     $sqlUsr = "SELECT * FROM usr WHERE categoria = '$categoria' AND perfil = 1 ORDER BY id ASC";
     $resultadoUsr = $conn->query($sqlUsr);
     $x=0;
@@ -81,7 +81,7 @@ while($rowCategoria=$resultadoCategorias->fetch_assoc()){
         $resultadoDoc = $conn->query($sqlDoc);
         $noDocs=$resultadoDoc->num_rows;
 
-        if($noDocs < 11){
+        if($noDocs < 22){
             $x++;
 
             echo '

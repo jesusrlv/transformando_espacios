@@ -42,7 +42,7 @@ while($rowCategoria = $resultadoCategorias->fetch_assoc()){
         continue;
     }
 
-    // CONTADOR (solo con 11 documentos)
+    // CONTADOR (solo con 22 documentos)
     $sqlCount = "
         SELECT u.id
         FROM usr u
@@ -50,7 +50,7 @@ while($rowCategoria = $resultadoCategorias->fetch_assoc()){
         WHERE u.categoria = '$categoria' 
         AND u.perfil = 1
         GROUP BY u.id
-        HAVING COUNT(d.id_ext) = 11
+        HAVING COUNT(d.id_ext) = 22
     ";
     $resultCount = $conn->query($sqlCount);
     $total = ($resultCount && $resultCount->num_rows > 0) ? $resultCount->num_rows : 0;
@@ -146,7 +146,7 @@ while($rowCategoria = $resultadoCategorias->fetch_assoc()){
         
         $noDocs = $resultadoDoc->num_rows;
 
-        if($noDocs == 11){
+        if($noDocs == 22){
 
             echo '
             <tr>
