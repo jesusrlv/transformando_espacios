@@ -256,7 +256,7 @@ else{
           <div class="mb-4">
             <span id="seccion_documentos"></span>
             <p class="h2"><i class="bi bi-filetype-pdf"></i> Sección de carga de documentos | <a href="#inicio"><i class="bi bi-arrow-bar-up"></i></a></p>
-            <p><small>Carga los documentos <strong>(formato PDF)</strong> para poder participar como postulante.</small></p>
+            <p><small>Carga los documentos para poder participar como postulante.</small></p>
           </div>
 
           <!-- accordion -->
@@ -344,4 +344,3 @@ else{
     <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-

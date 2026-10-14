@@ -38,9 +38,19 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             <p>
               <small class="card-text text-justify">'.$rowQuery['descripcion'].'</small>
             </p>';
-            if($rowQuery['id']==9){
+            if($rowQuery['id']==4){
+              echo'
+              <p class="text-center h1 h-50"><i class="bi bi-images"></i></p>
+              ';
+            }
+            else if($rowQuery['id']==9){
               echo'
               <p class="text-center h1 h-50"><i class="bi bi-youtube"></i></p>
+              ';
+            }
+            else if($rowQuery['id']==20){
+              echo'
+              <p class="text-center h1 h-50"><i class="bi bi-images"></i></p>
               ';
             }
             else{
@@ -54,7 +64,11 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             ';
             if($no_resultados == 0 || empty($no_resultados)){
 
-              if($rowQuery['id']==9){
+              if($rowQuery['id']==4){
+                echo'
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar video</a>';
+              }
+              else if($rowQuery['id']==9){
                 echo'
                 <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarVideo'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar video</a>';
               }
@@ -191,6 +205,36 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 <button type="button" class="btn btn-primary" onclick="editVideo('.$idDoc.','.$id.')" id="btnEditar'.$idDoc.'">Editar</button>
               </div>
               
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal agregar fotos 5 antes y 5 después -->
+        <div class="modal fade" id="cargarFotosAntesDespues'.$rowQuery['id'].'" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar <strong>'.$rowQuery['documento'].'</strong></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="window.location.reload();"></button>
+              </div>
+              <div class="modal-body">
+                <form id="upload_form">';
+                ?>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-youtube text-danger"></i></span>
+                    <input type="text" class="form-control" placeholder="Link de video" aria-label="Username" aria-describedby="basic-addon1" name="file<?php echo $idDoc?>" id="fileVideo<?php echo $idDoc?>" required>
+                  </div>
+                  <br>
+                <?php
+                echo'
+              </div>
+              </form>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
+                <button id="btnGuardar'.$idDoc.'" type="button" class="btn btn-primary" onclick="uploadVideo('.$idDoc.','.$id.')">Guardar</button>
+              </div>
+            
             </div>
           </div>
         </div>
