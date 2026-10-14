@@ -175,7 +175,7 @@ $perfil = $_SESSION['perfil'];
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img src="../../img/logo_injuventud_0.png" width="20" alt="" class="me-1">
-        <strong class="text-light" id="texto_">ADMINISTRADOR | Premio Estatal de la Juventud 2026</strong>
+        <strong class="text-light" id="texto_">ADMINISTRADOR | Transformando Espacios</strong>
       </a>
       <a href="prcd/sort.php" type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-door-open"></i> Salir</a>
     </div>
@@ -221,17 +221,15 @@ $perfil = $_SESSION['perfil'];
 
 </main>
 
-<footer class="text-light py-5" style="background-color: rgba(122, 205, 228, 0.929);">
-  <div class="container">
+<footer class="text-light py-5" style="background:rgb(122, 205, 228)">
+<div class="container">
     <div>
       <div class="row">
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
           <p class="mb-0 text-center"><img src="../../img/logo_white_02.png"  width="180" alt=""></p>
-          <p class="mb-0 mt-1 text-center"><small>&copy; Desarrollo:<br> <strong class="text-light">Tecnologías de la Información | INJUVENTUD</strong></small></p>
-          <!-- <p class="mb-0 text-center"><small><a href="/" style="text-decoration: none;" class="text-light">Gobierno del estado de Zacatecas</a>.</small></p> -->
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2 text-center">
-          <img src="../../img/logo_pej2025_01.png" width="180" alt="">
+          <img src="../../img/logo_transformando_2.jpeg" width="180" alt="">
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
           <p class="float-end mb-1 text-center">
