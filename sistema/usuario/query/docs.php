@@ -34,18 +34,13 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             
             <div class="card-body text-justify">
             
-            <h5 class="card-title"><i class="bi bi-filetype-pdf"></i> '.$rowQuery['documento'].'</h5>
+            <h5 class="card-title"><i class="bi bi-cloud-arrow-up-fill"></i> '.$rowQuery['documento'].'</h5>
             <p>
               <small class="card-text text-justify">'.$rowQuery['descripcion'].'</small>
             </p>';
             if($rowQuery['id']==4){
               echo'
               <p class="text-center h1 h-50"><i class="bi bi-images"></i></p>
-              ';
-            }
-            else if($rowQuery['id']==9){
-              echo'
-              <p class="text-center h1 h-50"><i class="bi bi-youtube"></i></p>
               ';
             }
             else if($rowQuery['id']==20){
@@ -66,7 +61,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
 
               if($rowQuery['id']==4){
                 echo'
-                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar video</a>';
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar fotos</a>';
               }
               else if($rowQuery['id']==9){
                 echo'
@@ -79,18 +74,30 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 
             }
             else{
+              if($rowQuery['id']==4){
+                echo'
+              <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar fotos</a>
+              <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
+              ';
+              }
               if($rowQuery['id']==9){
                 echo'
-            <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar video</a>
-            <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
-            ';
-            }
+              <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar fotos</a>
+              <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
+              ';
+              }
+              if($rowQuery['id']==9){
+                echo'
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar video</a>
+                <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
+                ';
+                }
               else{
                 echo'
-            <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarDoc'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar</a>
-            <a href="../'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar</a>
-            ';
-            }
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarDoc'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar</a>
+                <a href="../'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar</a>
+                ';
+                }
             }
             echo'
             </div>
@@ -225,6 +232,10 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-youtube text-danger"></i></span>
                     <input type="text" class="form-control" placeholder="Link de video" aria-label="Username" aria-describedby="basic-addon1" name="file<?php echo $idDoc?>" id="fileVideo<?php echo $idDoc?>" required>
                   </div>
+                  <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
                   <br>
                 <?php
                 echo'

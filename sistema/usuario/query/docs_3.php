@@ -34,7 +34,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             
             <div class="card-body text-justify">
             
-            <h5 class="card-title"><i class="bi bi-filetype-pdf"></i> '.$rowQuery['documento'].'</h5>
+            <h5 class="card-title"><i class="bi bi-cloud-arrow-up-fill"></i> '.$rowQuery['documento'].'</h5>
             <p>
               <small class="card-text text-justify">'.$rowQuery['descripcion'].'</small>
             </p>';
