@@ -8,37 +8,44 @@ require('conn/qc.php');
         require 'email/prcd/email/SMTP.php';
 // if (isset($_POST['usr']) && isset($_POST['pwd'])) {
    
+    $email = $_POST['email']; // usr en la base de datos
     $nombre = $_POST['nombre'];
     $telefono = $_POST['telefono'];
     $municipio = $_POST['municipio'];
-    $curp = $_POST['curp'];
-    $edad = $_POST['edad'];
-    $email = $_POST['email'];
-    $pwd = $_POST['pwd'];
     $categoria = $_POST['categoria'];
-    $perfil = 1;
+    $rfc = $_POST['rfc'];
+    $institucion = $_POST['institucion'];
+    $cargo = $_POST['cargo'];
+    $ubicacion = $_POST['ubicacion'];
+    $calle = $_POST['calle'];
+    $numero = $_POST['numero'];
+    $colonia = $_POST['colonia'];
+    $comunidad = $_POST['comunidad'];
+    $codigo_postal = $_POST['codigo_postal'];
+    $pwd = $_POST['pwd'];
 
+    $perfil = 1;
+    // usr es el email
     $sql = "INSERT INTO usr(
-        usr,
+        usr, 
         nombre,
         telefono,
         municipio,
-        curp,
-        edad,
+        categoria,
+        rfc,
+        institucion,
+        cargo,
+        ubicacion,
+        calle,
+        numero,
+        colonia,
+        comunidad,
+        codigo_postal,
         pwd,
-        perfil,
-        categoria
+        perfil
         )
         VALUES(
-            '$email',
-            '$nombre',
-            '$telefono',
-            '$municipio',
-            '$curp',
-            '$edad',
-            '$pwd',
-            '$perfil',
-            '$categoria'
+            
             )
         ";
         // email

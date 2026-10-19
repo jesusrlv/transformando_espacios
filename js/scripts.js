@@ -215,13 +215,20 @@ $(document).ready(function() {
     $('#registroMX').submit(function(e) {
         document.getElementById('boton_submit').hidden = true;
         var nombre = document.getElementById('nombre').value;
+        var telefono = document.getElementById('telefono').value;
         var municipio = document.getElementById('municipio').value;
-        var curp = document.getElementById('curp').value;
-        var edad = document.getElementById('edad').value;
+        var categoria = document.getElementById('categoria').value;
+        var rfc = document.getElementById('rfc').value; // Obtener el valor del campo del RFC
+        var institucion = document.getElementById('institucion').value;
+        var cargo = document.getElementById('cargo').value;
+        var ubicacion = document.getElementById('ubicacion').value;
+        var calle = document.getElementById('calle').value;
+        var numero = document.getElementById('numero').value;
+        var colonia = document.getElementById('colonia').value;
+        var comunidad = document.getElementById('comunidad').value;
+        var codigo_postal = document.getElementById('codigo_postal').value;
         var email = document.getElementById('email').value;
         var pwd = document.getElementById('pwd').value;
-        var telefono = document.getElementById('telefono').value;
-        var categoria = document.getElementById('categoria').value;
 
         // sweetalert
         let timerInterval
@@ -255,13 +262,20 @@ $(document).ready(function() {
             
             data:{
                 nombre:nombre,
-                municipio:municipio,
-                curp:curp,
-                edad:edad,
-                email:email,
-                pwd:pwd,
                 telefono:telefono,
-                categoria:categoria
+                municipio:municipio,
+                categoria:categoria,
+                rfc:rfc, // Enviar el valor del RFC al backend
+                institucion:institucion,
+                cargo:cargo,
+                ubicacion:ubicacion,
+                calle:calle,
+                numero:numero,
+                colonia:colonia,
+                comunidad:comunidad,
+                codigo_postal:codigo_postal,
+                email:email,
+                pwd:pwd
             },
             success: function(response)
             {
