@@ -45,11 +45,11 @@
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-vcard"></i></span>
-                    <input type="text" class="form-control" placeholder="CURP" aria-label="CURP" aria-describedby="basic-addon1" value="'.$rowVisualizar['curp'].'" name="curp" disabled>
+                    <input type="text" class="form-control" placeholder="CURP" aria-label="CURP" aria-describedby="basic-addon1" value="'.$rowVisualizar['rfc'].'" name="curp" disabled>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-123"></i></span>
-                    <input type="text" class="form-control" placeholder="Edad" aria-label="Edad" aria-describedby="basic-addon1" value="'.$rowVisualizar['edad'].'" name="edad" disabled>
+                    <input type="text" class="form-control" placeholder="Institución" aria-label="Institución" aria-describedby="basic-addon1" value="'.$rowVisualizar['institucion'].'" name="institucion" disabled>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="bi bi-geo"></i></span>
