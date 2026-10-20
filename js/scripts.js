@@ -214,21 +214,21 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#registroMX').submit(function(e) {
         document.getElementById('boton_submit').hidden = true;
-        var nombre = document.getElementById('nombre').value;
-        var telefono = document.getElementById('telefono').value;
-        var municipio = document.getElementById('municipio').value;
-        var categoria = document.getElementById('categoria').value;
-        var rfc = document.getElementById('rfc').value; // Obtener el valor del campo del RFC
-        var institucion = document.getElementById('institucion').value;
-        var cargo = document.getElementById('cargo').value;
-        var ubicacion = document.getElementById('ubicacion').value;
-        var calle = document.getElementById('calle').value;
-        var numero = document.getElementById('numero').value;
-        var colonia = document.getElementById('colonia').value;
-        var comunidad = document.getElementById('comunidad').value;
-        var codigo_postal = document.getElementById('codigo_postal').value;
-        var email = document.getElementById('email').value;
-        var pwd = document.getElementById('pwd').value;
+        let nombre = document.getElementById('nombre').value;
+        let telefono = document.getElementById('telefono').value;
+        let municipio = document.getElementById('municipio').value;
+        let categoria = document.getElementById('categoria').value;
+        let rfc = document.getElementById('rfc').value; // Obtener el valor del campo del RFC
+        let institucion = document.getElementById('institucion').value;
+        let cargo = document.getElementById('cargo').value;
+        let ubicacion = document.getElementById('ubicacion').value;
+        let calle = document.getElementById('calle').value;
+        let numero = document.getElementById('numero').value;
+        let colonia = document.getElementById('colonia').value;
+        let comunidad = document.getElementById('comunidad').value;
+        let codigo_postal = document.getElementById('codigo_postal').value;
+        let email = document.getElementById('email').value;
+        let pwd = document.getElementById('pwd').value;
 
         // sweetalert
         let timerInterval

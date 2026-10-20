@@ -40,12 +40,27 @@ require('conn/qc.php');
         numero,
         colonia,
         comunidad,
-        codigo_postal,
+        cp,
         pwd,
         perfil
         )
         VALUES(
-            
+            '$usr',
+            '$nombre',
+            '$telefono',
+            '$municipio',
+            '$categoria',
+            '$rfc',
+            '$institucion',
+            '$cargo',
+            '$ubicacion',
+            '$calle',
+            '$numero',
+            '$colonia',
+            '$comunidad',
+            '$codigo_postal',
+            '$pwd',
+            '$perfil'
             )
         ";
         // email
