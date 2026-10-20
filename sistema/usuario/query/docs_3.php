@@ -54,7 +54,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             ';
             if($no_resultados == 0 || empty($no_resultados)){
 
-              if($rowQuery['id']==9){
+              if($rowQuery['id']==20){
                 echo'
                 <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarVideo'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar video</a>';
               }

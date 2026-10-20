@@ -135,7 +135,7 @@
                         <i class="bi bi-globe-americas"></i>
                     </div>
                     <div class="alert alert-light border w-75" role="alert">
-                            <strong>Télefono: </strong>'.$rowMunicipio['telefono'].'
+                            <strong>Télefono: </strong>'.$rowVisualizar['telefono'].'
                     </div>
                 </div>
                     
