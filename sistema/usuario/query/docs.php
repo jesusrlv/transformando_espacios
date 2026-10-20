@@ -43,11 +43,6 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
               <p class="text-center h1 h-50"><i class="bi bi-images"></i></p>
               ';
             }
-            else if($rowQuery['id']==20){
-              echo'
-              <p class="text-center h1 h-50"><i class="bi bi-images"></i></p>
-              ';
-            }
             else{
               echo'
               <p class="text-center h1 h-50"><i class="bi bi-filetype-pdf"></i></p>

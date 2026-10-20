@@ -38,9 +38,9 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             <p>
               <small class="card-text text-justify">'.$rowQuery['descripcion'].'</small>
             </p>';
-            if($rowQuery['id']==9){
+            if($rowQuery['id']==20){
               echo'
-              <p class="text-center h1 h-50"><i class="bi bi-youtube"></i></p>
+              <p class="text-center h1 h-50"><i class="bi bi-images"></i></p>
               ';
             }
             else{
