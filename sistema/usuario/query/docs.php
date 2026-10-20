@@ -80,18 +80,18 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
               <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
               ';
               }
-              if($rowQuery['id']==9){
+              else if($rowQuery['id']==9){
                 echo'
               <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar fotos</a>
               <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
               ';
               }
-              if($rowQuery['id']==9){
-                echo'
-                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar video</a>
-                <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
-                ';
-                }
+              // if($rowQuery['id']==9){
+              //   echo'
+              //   <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar video</a>
+              //   <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
+              //   ';
+              //   }
               else{
                 echo'
                 <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarDoc'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar</a>
