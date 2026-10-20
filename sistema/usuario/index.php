@@ -56,7 +56,8 @@ else{
         font-family: 'Montserrat', sans-serif;
       }
       #colorRounded{
-        background-color: rgba(122, 205, 228, 0.7);
+        /* background-color: rgba(122, 205, 228, 0.8); */
+        background-color: rgb(20, 37, 63, 0.7);
       }
       #imgPortrait{
         width:100%; 
@@ -187,7 +188,7 @@ else{
 
     <main id="imgPortrait">
       <div id="portada">
-        <img src="../../img/fondo_transformando_espacios_2.jpg" alt="">
+        <img src="../../img/fondo_transformando_espacios_7.jpeg" alt="">
         <section class="text-center container">
           <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto rounded p-2" id="colorRounded">
