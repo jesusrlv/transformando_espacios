@@ -99,7 +99,7 @@
     // VALIDA USUARIO REGISTRADO
  
     $(document).ready(function() {	
-        $('#curp').on('blur', function() {
+        $('#rfc').on('blur', function() {
             $('#result-username2').html('<img src="img/loader.gif" />').fadeOut(1000);
     
             var username = $(this).val();		
