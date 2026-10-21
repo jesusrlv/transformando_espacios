@@ -57,7 +57,7 @@ else{
       }
       #colorRounded{
         /* background-color: rgba(122, 205, 228, 0.8); */
-        background-color: rgb(20, 37, 63, 0.7);
+        background-color: rgba(20, 37, 63, 0.7);
       }
       #imgPortrait{
         width:100%; 
