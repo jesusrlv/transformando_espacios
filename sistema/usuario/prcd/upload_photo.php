@@ -21,7 +21,7 @@
         echo "Ya se han subido 5 archivos de este tipo, no es posible subir más.";
         exit();
     }
-    else {
+    else if($fila ==0){
         $numero = 1;
         $link= 'archivo_foto_antes_'.$doc.'_'.$numero;
     }

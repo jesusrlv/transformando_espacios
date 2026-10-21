@@ -56,7 +56,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
 
               if($rowQuery['id']==4){
                 echo'
-                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar fotos</a>';
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'" onclick="queryFotosAntes('.$rowQuery['id'].', '.$rowQuery['documento'].');queryFotosDespues('.$rowQuery['id'].', '.$rowQuery['documento'].')"><i class="bi bi-plus-circle"></i> Cargar fotos</a>';
               }
               else if($rowQuery['id']==9){
                 echo'
@@ -71,7 +71,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             else{
               if($rowQuery['id']==4){
                 echo'
-              <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar fotos</a>
+              <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'" onclick="queryFotosAntes('.$rowQuery['id'].', '.$rowQuery['documento'].');queryFotosDespues('.$rowQuery['id'].', '.$rowQuery['documento'].')"><i class="bi bi-pencil-square"></i> Editar fotos</a>
               <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
               ';
               }
@@ -237,13 +237,13 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                     name="agregarFoto<?php echo $idDoc?>" 
                     id="agregarFoto<?php echo $idDoc?>" 
                     onchange="uploadFoto(<?php echo $idDoc ?>,<?php echo $id ?>)" 
-                    accept="application/pdf" 
+                    accept="application/image" 
                     class="form-control">
                   <button 
                     id="btnGuardar<?php echo $idDoc?>" 
                     type="button" 
                     class="btn btn-primary" 
-                    onclick="uploadFoto(<?php echo $idDoc?>,<?php echo $id ?>)">
+                    onclick="uploadPhoto(<?php echo $idDoc?>,<?php echo $id ?>)">
                     <i class="bi bi-plus-circle"></i>
                   </button>
                 </div>

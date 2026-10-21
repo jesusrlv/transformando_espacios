@@ -215,7 +215,7 @@ function queryFotosAntes(idUsr, idDoc){
         idU:idU
     },
     success: function(data){
-      $('#listSocialMM1'+idDoc).fadeIn(1000).html(data);
+      $('#contenedorFotosAntes').fadeIn(1000).html(data);
     }
   });
 }
@@ -231,7 +231,7 @@ function queryFotosDespues(idUsr, idDoc){
         idU:idU
     },
     success: function(data){
-      $('#listSocialMM1'+idDoc).fadeIn(1000).html(data);
+      $('#contenedorFotosDespues').fadeIn(1000).html(data);
     }
   });
 }
@@ -391,9 +391,10 @@ function categoriaCompleta(){
 
 // subir fotos antes y despues
 function uploadPhoto(doc,idUsr) {
-    var file = _("file"+doc).files[0];
+    var file = _("agregarFoto"+doc).files[0];
     var documento = doc;
     var idUsuario = idUsr;
+    let tipo = document.getElementById('selectFotos'+doc).value;
     var formdata = new FormData();
     // variable del name file
     formdata.append("file", file);
@@ -405,7 +406,17 @@ function uploadPhoto(doc,idUsr) {
     ajax.addEventListener("load", completeHandler, false);
     ajax.addEventListener("error", errorHandler, false);
     ajax.addEventListener("abort", abortHandler, false);
-    ajax.open("POST", "prcd/upload_photo.php"); 
+    if(tipo == 1){
+      ajax.open("POST", "prcd/upload_photo.php"); 
+    }
+    else if(tipo == 2){
+      ajax.open("POST", "prcd/upload_photo_2.php");
+    }
+    else{
+      alert("Error al subir la foto");
+      return false;
+    }
+    // ajax.open("POST", "prcd/upload_photo.php"); 
     
     // http://www.developphp.com/video/JavaScript/File-Upload-Progress-Bar-Meter-Tutorial-Ajax-PHP
     //use file_upload_parser.php from above url
