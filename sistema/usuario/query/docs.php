@@ -71,7 +71,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             else{
               if($rowQuery['id']==4){
                 echo'
-              <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar fotos</a>
+              <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarFotosAntesDespues'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar fotos</a>
               <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
               ';
               }
@@ -223,22 +223,36 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 <form id="upload_form">';
                 ?>
 
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1"><i class="bi bi-youtube text-danger"></i></span>
-                    <input type="text" class="form-control" placeholder="Link de video" aria-label="Username" aria-describedby="basic-addon1" name="file<?php echo $idDoc?>" id="fileVideo<?php echo $idDoc?>" required>
-                  </div>
-                  <div class="input-group mb-3">
-  <span class="input-group-text" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-</div>
-                  <br>
+                  
+                 <div class="input-group mb-3">
+                  <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+                  <input 
+                    type="file" 
+                    name="agregarFoto<?php echo $idDoc?>" 
+                    id="agregarFoto<?php echo $idDoc?>" 
+                    onchange="uploadFoto(<?php echo $idDoc ?>,<?php echo $id ?>)" 
+                    accept="application/pdf" 
+                    class="form-control">
+                  <button 
+                    id="btnGuardar<?php echo $idDoc?>" 
+                    type="button" 
+                    class="btn btn-primary" 
+                    onclick="uploadFoto(<?php echo $idDoc?>,<?php echo $id ?>)">
+                    <i class="bi bi-plus-circle"></i>
+                  </button>
+                </div>
+
+                <progress id="progressBar<?php echo $idDoc ?>" value="0" max="100" style="width:300px;"></progress>
+                  <small id="status<?php echo $idDoc ?>"></small>
+                  <p id="loaded_n_total<?php echo $idDoc ?>"></p>
+                
                 <?php
                 echo'
               </div>
               </form>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
-                <button id="btnGuardar'.$idDoc.'" type="button" class="btn btn-primary" onclick="uploadVideo('.$idDoc.','.$id.')">Guardar</button>
+                
               </div>
             
             </div>
