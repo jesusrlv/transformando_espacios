@@ -8,14 +8,14 @@
     $idUsr = $_POST['idUsuario'];
     $doc = $_POST['documento'];
     $fecha_sistema = strftime("%Y-%m-%d,%H:%M:%S");
-    $link= 'archivo'.$doc;
+    $link= 'archivo_foto_antes_'.$doc;
 
     $sql = "SELECT * FROM documentos WHERE id_ext = '$idUsr' AND documento = '$doc'";
     $resultado = $conn -> query($sql);
     $fila = $resultado -> num_rows;
     if($fila>0){
         $numero = $fila + 1;
-        $link= 'archivo'.$doc.'_'.$numero;
+        $link= 'archivo_foto_antes_'.$doc.'_'.$numero;
     } 
     else if($fila == 5){
         echo "Ya se han subido 5 archivos de este tipo, no es posible subir más.";
@@ -23,7 +23,7 @@
     }
     else {
         $numero = 1;
-        $link= 'archivo'.$doc.'_'.$numero;
+        $link= 'archivo_foto_antes_'.$doc.'_'.$numero;
     }
 
     $fileName = $_FILES["file"]["name"]; // The file name

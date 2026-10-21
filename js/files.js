@@ -219,6 +219,22 @@ function queryFotosAntes(idUsr, idDoc){
     }
   });
 }
+function queryFotosDespues(idUsr, idDoc){
+  var idD = idDoc;
+  var idU = idUsr;
+  $.ajax({
+    type: "POST",
+    url: 'query/fotos_despues.php',
+    dataType:'html',
+    data:{
+        idD:idD,
+        idU:idU
+    },
+    success: function(data){
+      $('#listSocialMM1'+idDoc).fadeIn(1000).html(data);
+    }
+  });
+}
 
 function cargarFotosAntes(idDoc,idUsr){
   var link = document.getElementById('linkSocial'+idDoc).value;

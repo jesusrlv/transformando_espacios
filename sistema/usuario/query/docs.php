@@ -213,14 +213,20 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
 
         <!-- Modal agregar fotos 5 antes y 5 después -->
         <div class="modal fade" id="cargarFotosAntesDespues'.$rowQuery['id'].'" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar <strong>'.$rowQuery['documento'].'</strong></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="window.location.reload();"></button>
               </div>
               <div class="modal-body">
-                <form id="upload_form">';
+                <form id="upload_form">
+                <select class="form-select mb-3" id="selectFotos'.$idDoc.'" aria-label="Default select example">
+                  <option selected>Selecciona categoría de foto</option>
+                  <option value="1"><--Foto Antes</option>
+                  <option value="2">-->Foto Después</option>
+                </select>
+                ';
                 ?>
 
                   
@@ -248,7 +254,19 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 
                 <?php
                 echo'
-              </div>
+                
+                </div>
+                <div class="container">
+                <p class="text-dark h6">Listado de Fotos</p>
+                <p class="text-danger h6"><small>Solo se permiten 5 fotos de cada tipo, si deseas agregar más, elimina alguna de las existentes.</small></p>
+                <p class="text-dark h6"><i class="bi bi-skip-backward"></i> Antes</p>
+                  <div class="row" id="contenedorFotosAntes">
+                  </div>
+                <p class="text-dark h6"><i class="bi bi-skip-forward"></i> Después</p>
+                  <div class="row" id="contenedorFotosDespues">
+                  </div>
+                </div>
+
               </form>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
