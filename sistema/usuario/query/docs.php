@@ -231,7 +231,6 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
 
                   
                  <div class="input-group mb-3">
-                  <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
                   <input 
                     type="file" 
                     name="agregarFoto<?php echo $idDoc?>" 
