@@ -318,7 +318,7 @@ function deleteFotosAntes(idUsr,idDoc,id){
 }
 
 function contador(){
-  var cont = document.getElementById('contarDocs').value;
+  let cont = document.getElementById('contarDocs').value;
 
   if(cont == 0){
     Swal.fire({
@@ -332,7 +332,7 @@ function contador(){
 
   });
   }
-  else if(cont >= 0 & cont < 22){
+  else if(cont > 0 && cont < 22){
     Swal.fire({
       icon: 'warning',
       imageUrl: '../../img/logo_transformando_2.jpeg',

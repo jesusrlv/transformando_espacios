@@ -1,19 +1,37 @@
 <?php
-
 include('qc.php');
 
 $sqlQuery = "SELECT * FROM catalogo_documentos ORDER BY id ASC";
 $resultadoQuery = $conn -> query($sqlQuery);
-$noCatalogoquery = mysqli_num_rows($resultadoQuery);
-// $rowQuery = $resultadoQuery ->fetch_assoc();
+$noCatalogoquery = $resultadoQuery->num_rows;
 
-// while($rowQuery = $resultadoQuery ->fetch_assoc()){
-//     $idDoc = $rowQuery['id'];
     // query docs usr
     $sqlDocs = "SELECT * FROM documentos WHERE id_ext = '$id'";
     $resultadoDocs = $conn -> query($sqlDocs);
-    $no_resultados = mysqli_num_rows($resultadoDocs);
-    
+    $no_resultadosX = $resultadoDocs->num_rows;
+
+    // links 4
+    $sqlLinks4 = "SELECT * FROM documentos WHERE id_ext = '$id' AND documento = 4";
+    $resultadoLinks4 = $conn -> query($sqlLinks4);
+    $no_links4 = mysqli_num_rows($resultadoLinks4);
+    if($no_links4 > 0){
+        $sumaLinks4 = 1;
+    }else{
+        $sumaLinks4 = 0;
+    }
+
+    // links 20
+    $sqlLinks20 = "SELECT * FROM documentos WHERE id_ext = '$id' AND documento = 20";
+    $resultadoLinks20 = $conn -> query($sqlLinks20);
+    $no_links20 = mysqli_num_rows($resultadoLinks20);
+    if($no_links20 > 0){
+        $sumaLinks20 = 1;
+    }else{
+        $sumaLinks20 = 0;
+    }
+
+    $no_resultados = $no_resultadosX + $sumaLinks4 + $sumaLinks20;
+
     $resultadoSuma = ($no_resultados * 100)/($noCatalogoquery);
     $porcentajeDocs = round($resultadoSuma);
         if($no_resultados == 0){
@@ -50,7 +68,7 @@ $noCatalogoquery = mysqli_num_rows($resultadoQuery);
             </div>
             ';
         }
-        else if($no_resultados == 22){
+        else if($no_resultados >= 22){
             echo '
             <div class="col">
                 <div class="card border-success" style="height:300px; background-color: rgba(25, 155, 216, 0.9);">

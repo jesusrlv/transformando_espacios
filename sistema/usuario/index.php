@@ -187,6 +187,7 @@ else{
     </header>
 
     <main id="imgPortrait">
+      <input type="text" value="<?php echo $id ?>" id="idUsr" hidden>
       <div id="portada">
         <img src="../../img/fondo_transformando_espacios_7.jpeg" alt="">
         <section class="text-center container">
